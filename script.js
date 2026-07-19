@@ -1,18 +1,60 @@
-const words = [
-      "Aspiring Web Developer",
-        "Python Learner",
-          "Future Software Developer",
-            "Language Enthusiast"
-            ];
+const display = document.getElementById("display");
+let currentInput = "";
+function updateDisplay() {
+        display.value = currentInput;
+        
+}
+const display = document.getElementById("display");
 
-            let index = 0;
-            const text = document.querySelector(".typing-text");
+let currentInput = "";
 
-            setInterval(() => {
-              index++;
-                if (index >= words.length) {
-                    index = 0;
-                      }
+function updateDisplay() {
+    display.value = currentInput;  
+}
+function appendValue(value) {
+        currentInput += value;
+            updateDisplay();
+            
+}
+function clearDisplay() {
+        currentInput = "";
+            updateDisplay();
+            
+}
+function backspace() {
+        currentInput = currentInput.slice(0, -1);
+            updateDisplay();
+            
+}
+function calculate() {
+        try {
+                currentInput = eval(currentInput).toString();
+                        updateDisplay();
+                            } catch {
+                                    currentInput = "Error";
+                                            updateDisplay();
+                                                }
+                                                
+}
+function appendValue(value) {
+        currentInput += value;
+            updateDisplay();
+            
+}
+function updateDisplay() {
+        document.getElementById("display").value = currentInput;
+        
+}
+let currentInput = "";
+let currentInput = "";
 
-                        text.textContent = words[index];
-                        }, 2000);
+// appendValue()
+
+// updateDisplay()
+
+// clearDisplay()
+
+// backspace()
+
+// calculate()
+
